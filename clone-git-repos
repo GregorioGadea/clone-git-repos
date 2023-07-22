@@ -4,11 +4,11 @@ mkdir git-repos
 
 cd git-repos
 
-repositorys = $(curl -s https://api.github.com/users/GregorioGadea/repos | awk `/ssh_url/{print $2}` | sed `s/^"//g` | sed 
+repositories = $(curl -s https://api.github.com/users/GregorioGadea/repos | awk `/ssh_url/{print $2}` | sed `s/^"//g` | sed 
 `s/",$//g`)
 
-for repositorio in $repositorys 
+for repository in $repositories
 do
-	git clone $repositorio
+	git clone $repository
 done
 

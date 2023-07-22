@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir git-repos
+
+cd git-repos
+
+repositorys = $(curl -s https://api.github.com/users/GregorioGadea/repos | awk `/ssh_url/{print $2}` | sed `s/^"//g` | sed 
+`s/",$//g`)
+
+for repositorio in $repositorys 
+do
+	git clone $repositorio
+done
+

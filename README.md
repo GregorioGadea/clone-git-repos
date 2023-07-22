@@ -1,4 +1,4 @@
-##This script enables you to effortlessly copy all your repositories from GitHub to your computer.
+#This script enables you to effortlessly copy all your repositories from GitHub to your computer.
 
 For this script work you need to install ssh for your github account, here is a tutorial of how to do it: 
 
